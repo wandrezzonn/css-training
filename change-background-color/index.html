@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Change Background Color</title>
+  </head>
+  <body>
+    <div class="colors" id="colors">
+        <input type="color" name="color" id="color" />
+      <span
+        style="--clr: #1dd1a1"
+        class="active"
+        onclick="changeColor('#1dd1a1', this)"
+      ></span>
+      <span style="--clr: #ff6b6b" onclick="changeColor('#ff6b6b',this)"></span>
+      <span style="--clr: #d11e48" onclick="changeColor('#d11e48',this)"></span>
+      <span style="--clr: #0074b4" onclick="changeColor('#0074b4',this)"></span>
+      <span style="--clr: #9d2053" onclick="changeColor('#9d2053',this)"></span>
+      <span style="--clr: #8870ff" onclick="changeColor('#8870ff',this)"></span>
+      <span style="--clr: #f40034" onclick="changeColor('#f40034',this)"></span>
+     
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>
