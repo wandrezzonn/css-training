@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eff0f4;
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .drop {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  width: 450px;
+  height: 400px;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+    25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
+    inset -20px 20px 25px rgba(255, 255, 255, 0.9);
+}
+
+.container .drop {
+  border-radius: 45% 35% 35% 25% / 25% 45% 35% 25%;
+}
+
+.container .drop:hover {
+  border-radius: 50%;
+}
+
+.container .drop::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+    25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
+    inset -20px 20px 25px rgba(255, 255, 255, 0.9);
+}
+
+.container .drop::after {
+  content: "";
+  position: absolute;
+  top: 22%;
+  left: 27%;
+  height: 20px;
+  width: 20px;
+  border-radius: 25px;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+    25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
+    inset -20px 20px 25px rgba(255, 255, 255, 0.9);
+}
+.container .drop .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.container .drop .content h2 {
+  color: rgb(0, 153, 255);
+  font-size: 1.5em;
+}
