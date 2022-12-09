@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.aside {
+  min-height: 100vh;
+  max-width: 300px;
+  width: 65px;
+  transition: width 0.5s ease-in-out;
+}
+
+.aside.max {
+  width: 300px;
+}
+
+.aside main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #14242e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  row-gap: 1rem;
+  overflow: hidden;
+}
+
+.aside main .toggle-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside.max main .toggle-container {
+  justify-content: flex-end;
+}
+
+.aside main .toggle-container .toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.aside.max main .toggle-container .toggle .arrow-forward {
+  transform: rotate(180deg);
+}
+
+.aside main .aside-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.aside main .aside-content .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.aside main .aside-content .content .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 7px;
+  height: 30px;
+  min-width: 30px;
+  width: 30px;
+}
+
+.aside main .aside-content .content .label {
+  display: none;
+  color: #fff;
+  transition: 0.5s;
+  transition-delay: 0.8s;
+}
+
+.aside.max main .aside-content .content {
+  justify-content: flex-start;
+}
+
+.aside.max main .aside-content .content .label {
+  display: block;
+}
