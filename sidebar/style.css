@@ -4,15 +4,34 @@
   box-sizing: border-box;
 }
 
+ul li {
+  list-style: none;
+}
+
 body {
   min-height: 100vh;
 }
 
+body .body-content {
+  margin-left: 3%;
+  transition: 0.5s ease-in-out;
+  background-color: #333;
+  min-height: 100vh;
+}
+
+.aside.max ~ .body-content {
+  margin-left: 300px;
+ 
+}
 .aside {
   min-height: 100vh;
   max-width: 300px;
   width: 65px;
   transition: width 0.5s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .aside.max {
@@ -87,8 +106,6 @@ body {
 .aside main .aside-content .content .label {
   display: none;
   color: #fff;
-  transition: 0.5s;
-  transition-delay: 0.8s;
 }
 
 .aside.max main .aside-content .content {
