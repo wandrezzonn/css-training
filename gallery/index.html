@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+</head>
+
+<body onload="onLoad()" onresize="changeButtonVisibility()">
+    <section class="gallery" id="gallery">
+        <div class="photos" id="photos">
+            <div class="card-image"></div>
+            <div class="card-image"></div>
+            <div class="card-image"></div>
+            <div class="card-image"></div>
+            <div class="card-image"></div>
+            <div class="card-image"></div>
+            <div class="card-image"></div>
+        </div>
+        <button class="button-left  button-scroll" id="button-left" onclick="scrollPhotosLeft()">
+            <ion-icon name="arrow-back-outline"></ion-icon></button>
+        <button class="button-right button-scroll" onclick="scrollPhotosRight()">
+            <ion-icon name="arrow-forward-outline"></ion-icon></button>
+    </section>
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

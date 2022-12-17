@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-color: #333;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.gallery {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.gallery .button-scroll {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  top: 45%;
+  visibility: hidden;
+  border: none;
+  background-color: rgb(229, 98, 255);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery .button-scroll ion-icon {
+  color: #fff;
+}
+.button-right {
+  right: 2px;
+}
+.button-left {
+  left: 2px;
+}
+.gallery .photos {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: transparent;
+  scroll-behavior: smooth;
+}
+.card-image {
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  background-color: #4f52ff;
+  border-radius: 4px;
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.photos::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .card-image {
+    min-width: 200px;
+    height: 200px;
+  }
+}
