@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100dvh;
+    width: 100dvw;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.slide-container {
+    display: inline-flex;
+    overflow: hidden;
+    width: 800px;
+    height: 500px;
+    background-color: aliceblue;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    min-width: 800px;
+    background-color: var(--clr);
+    transition: all 0.5s ease-in-out;
+    transform: translateX(calc(100% * var(--i)));
+}
+
+.slide.actived {
+    transition: all 0.5s ease-in-out;
+    transform: translateX(calc(-100% * var(--i)));
+}
+.slide.removed{
+    transition: all 0.5s ease-in-out;
+    transform: translateX(calc(-100% * var(--i)));
+}
