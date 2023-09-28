@@ -34,8 +34,13 @@ body {
     background-color: var(--clr);
     transition: all 0.5s ease-in-out;
     transform: translateX(calc(100% * var(--i)));
+    overflow: hidden;
 }
-
+.slide img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 .slide.actived {
     transition: all 0.5s ease-in-out;
     transform: translateX(calc(-100% * var(--i)));
