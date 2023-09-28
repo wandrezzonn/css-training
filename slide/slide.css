@@ -21,6 +21,9 @@ body {
     background-color: aliceblue;
     position: relative;
     transition: all 0.5s ease-in-out;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
 }
 
 .slide {
@@ -37,7 +40,7 @@ body {
     transition: all 0.5s ease-in-out;
     transform: translateX(calc(-100% * var(--i)));
 }
-.slide.removed{
+.slide.previous{
     transition: all 0.5s ease-in-out;
     transform: translateX(calc(-100% * var(--i)));
 }

@@ -1,81 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="slide.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="slide.css" />
     <title>Slide</title>
-</head>
+  </head>
 
-<body>
-    <button onclick="next()">NEXT</button>
-    <section class="slide-container">
-        <div class="slide" style="--i:0;--clr:#db7093;">
-            1
-        </div>
-
-        <div class="slide" style="--i:1;--clr:#20b2aa;">
-            2
-        </div>
-
-        <div class="slide" style="--i:2;--clr:#d63e92;">
-            3
-        </div>
-
-        <div class="slide" style="--i:3;--clr:#daa520;">
-            4
-        </div>
-
-        <div class="slide" style="--i:4;--clr:#ff340f;">
-            5
-        </div>
-
-        <div class="slide" style="--i:5;--clr:#3cb371;">
-            6
-        </div>
-    </section>
+  <body>
     <button onclick="back()">BACK</button>
+    <section class="slide-container">
+      <div class="slide" style="--i: 0; --clr: #db7093">1</div>
+
+      <div class="slide" style="--i: 1; --clr: #20b2aa">2</div>
+
+      <div class="slide" style="--i: 2; --clr: #d63e92">3</div>
+
+      <div class="slide" style="--i: 3; --clr: #daa520">4</div>
+
+      <div class="slide" style="--i: 4; --clr: #ff340f">5</div>
+
+      <div class="slide" style="--i: 5; --clr: #3cb371">6</div>
+
+      <div class="slide" style="--i: 6; --clr: #d62bd3">7</div>
+    </section>
+    <button onclick="next()">NEXT</button>
     <script>
-        let current = 0;
-        function next() {
-            const all = document.querySelectorAll('.slide');
-            if(current !== all.length){
-                
-            const currentEl = all.item(current);
-            currentEl.classList.remove('actived');
-            currentEl.classList.add('removed');
-            current++
-            if (current !== all.length) {
-                const actived = all.item(current);
-                actived.classList.add("actived");
-                actived.classList.remove('removed')
-            }else{
-                current = all.length-1
-            }
-            }
-           
+      let current = 0;
 
+      function next() {
+        const all = document.querySelectorAll(".slide");
+        if (current !== all.length) {
+          const currentEl = all.item(current);
+          currentEl.classList.remove("actived");
+          currentEl.classList.add("previous");
+          current++;
+          if (current !== all.length) {
+            const actived = all.item(current);
+            actived.classList.add("actived");
+            actived.classList.remove("previous");
+          } else {
+            current = all.length - 1;
+          }
         }
-
-        function back() {
-            const all = document.querySelectorAll('.slide');
-            const currentEl = all.item(current);
-            currentEl.classList.remove('actived');
-            currentEl.classList.remove('removed');
-            current--
-            if (current > 0) {
-                const actived = all.item(current);
-                actived.classList.remove('removed');
-                actived.classList.add("actived");
-                
-            } else {
-                current = 0;
-            }
-
-
+      }
+      function back() {
+        const all = document.querySelectorAll(".slide");
+        const currentEl = all.item(current);
+        currentEl.classList.remove("actived");
+        currentEl.classList.remove("previous");
+        current--;
+        if (current > 0) {
+          const actived = all.item(current);
+          actived.classList.remove("previous");
+          actived.classList.add("actived");
+        } else {
+          current = 0;
         }
+      }
     </script>
-</body>
-
+  </body>
 </html>
